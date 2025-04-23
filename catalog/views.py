@@ -8,10 +8,10 @@ def index(request):
         'news': News.objects.all(),
         'title': 'Список новостей'
     }
-    return render(request, 'FirstApp/index.html', context)
+    return render(request, 'catalog/index.html', context)
 
 def about(request):
-    return render(request, 'FirstApp/about.html')
+    return render(request, 'catalog/about.html')
 
 def user(request):
-    return render(request, 'FirstApp/user.html')
+    return render(request, 'catalog/user.html')
