@@ -7,4 +7,4 @@ __pycache__
 venv
 .git
 .idea
-db.sqlite3
+media

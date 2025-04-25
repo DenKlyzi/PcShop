@@ -9,6 +9,7 @@ python = ">=3.11"
 Django = "^5.1.6"
 pillow = "^11.1.0"
 environs = "^14.1.1"
+psycopg2 = "^2.9.10"
 
 [[tool.poetry.packages]]
 include = "backend"
