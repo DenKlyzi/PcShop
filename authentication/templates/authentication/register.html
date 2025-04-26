@@ -19,13 +19,13 @@
                     <div class="container">
                         <div class="left">
                             <div class="address">
-                                <img src="{% static '/img/main/placemark.png' %}" alt="Местоположение">
+                                <img src="{% static '/img/main/placemark.png' %}">
                                 <p>Калуга, Грабцевское шоссе 128</p>
                             </div>
                         </div>
                         <div class="middle">
                             <div class="search-box-holder">
-                                <div class="search-form">
+                                <div class="search-form ">
                                     <form action="#" method="GET">
                                         <div class="form-group search-box menu d-flex flex-column align-items-center">
                                             <input type="text" name="query" class="form-control" placeholder="Поиск продукции..." value="">
@@ -36,12 +36,12 @@
                             </div>
                         </div>
                         <div class="right">
-                            <ul class="main-menu__widge-box d-flex align-items-center">
+                            <ul class="main-menu__widge-box d-flex align-items-center ">
                                 <li class="d-lg-block d-none"><a href="#">Избранное</a></li>
                                 <li class="d-lg-block d-none"><a href="#">О нас</a></li>
                                 <li class="d-lg-block d-none"><a href="#">Контакты</a></li>
                                 <li class="d-lg-block d-none">
-                                    <a href="#"><img src="{% static '/img/icons/user_icon.png' %}" alt="Личный кабинет"></a>
+                                    <a href="#"><img src="{% static '/img/icons/user_icon.png' %}"></a>
                                 </li>
                             </ul>
                         </div>
@@ -53,9 +53,7 @@
                         <div class="row">
                             <nav>
                                 <ul class="page-dropdown-menu d-flex align-items-center justify-content-center">
-                                    <div class="middle">
-                                        <a class="logo" href="#"><img src="{% static '/img/logos/vortex_logo.png' %}" alt="Vortex"></a>
-                                    </div>
+                                    <div class="middle"><a class="logo" href="#"><img src="{% static '/img/logos/vortex_logo.png' %}" alt=""></a></div>
                                     <li class="dropdown-list"><a href="#"><span>ВИДЕОКАРТЫ</span></a></li>
                                     <li class="dropdown-list"><a href="#">ПРОЦЕССОРЫ</a></li>
                                     <li class="dropdown-list"><a href="#"><span>ОПЕРАТИВНАЯ ПАМЯТЬ</span></a></li>
@@ -63,7 +61,7 @@
                                     <li class="dropdown-list"><a href="#">ГОТОВЫЕ СБОРКИ</a></li>
                                     <li class="dropdown-list"><a href="#"><span>ДРУГОЕ</span></a></li>
                                     <li class="dropdown-list"><a href="#"><span>НОВОСТИ</span></a></li>
-                                    <li class="dropdown-list"><a href="#" class="number cart-icon"><img src="{% static '/img/icons/cart_icon.png' %}" alt="Корзина"><span class="total">{{ cart_items_count }}</span></a></li>
+                                    <li class="dropdown-list"><a href="#" class="number cart-icon"><img src="{% static '/img/icons/cart_icon.png' %}"><span class="total"></span></a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -284,7 +282,7 @@
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
                             <div class="footer-default__single-box">
                                 <div class="company-info">
-                                    <div class="footer-logo"><a href="index.html"><img src="{% static '/img/logos/vortex-footer_logo.png' %}" alt=""></a></div>
+                                    <div class="footer-logo"><a href="login.html"><img src="{% static '/img/logos/vortex-footer_logo.png' %}" alt=""></a></div>
                                     <div class="text1">
                                         <p>© 2024 vortex. Все права защищены</p>
                                     </div>
@@ -328,4 +326,5 @@
         </footer>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </html>

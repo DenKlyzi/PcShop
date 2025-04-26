@@ -3,9 +3,14 @@ from django.contrib import admin
 from django.conf import settings
 from django.urls import path, include
 
+from main.views import index
+from authentication.views import login, register
+
 urlpatterns = [
     path('admin', admin.site.urls),
-    path('', include('main.urls')),
+    path('', index, name='index'),
+    path('login/', login, name='login'),
+    path('register/', register, name='register'),
     path('catalog/', include('catalog.urls')),
 ]
  
