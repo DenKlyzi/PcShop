@@ -1,330 +1,99 @@
+{% extends "base.html" %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <link rel="shortcut icon" href="{% static '/img/logos/vortex_favicon.png' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static '/css/bootstrap.5.1.1.min.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static '/css/style.css' %}">
-    <title>Vortex - Интернет магазин</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex | Регистрация</title>
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
-    <div>
-        <header class="header-default">
-            <div class="menubox">
-                <div class="main-menu">
-                    <div class="container">
-                        <div class="left">
-                            <div class="address">
-                                <img src="{% static '/img/main/placemark.png' %}">
-                                <p>Калуга, Грабцевское шоссе 128</p>
+{% block content %}
+<div>
+    <main class="overflow-hidden">
+        <section class="login-page pt-50 pb-60">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-8 col-md-9 wow fadeInUp animated">
+                        <div class="login-register-form" style="background-image: url('{%  static '/img/authentication/login-bg.png' %}');">
+                            <div class="top-title text-center">
+                                <h2>Регистрация</h2>
+                                <p class="login-question">
+                                    Есть аккаунт? <a href="{% url 'login' %}">Вход</a>
+                                </p>
+                                <div id="login-feedback" class="text-danger" style="text-align: center;"></div>
                             </div>
-                        </div>
-                        <div class="middle">
-                            <div class="search-box-holder">
-                                <div class="search-form ">
-                                    <form action="#" method="GET">
-                                        <div class="form-group search-box menu d-flex flex-column align-items-center">
-                                            <input type="text" name="query" class="form-control" placeholder="Поиск продукции..." value="">
-                                            <span class="search-icon"><img src="{% static '/img/icons/loupe_icon.png' %}"></span>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <ul class="main-menu__widge-box d-flex align-items-center ">
-                                <li class="d-lg-block d-none"><a href="#">Избранное</a></li>
-                                <li class="d-lg-block d-none"><a href="#">О нас</a></li>
-                                <li class="d-lg-block d-none"><a href="#">Контакты</a></li>
-                                <li class="d-lg-block d-none">
-                                    <a href="#"><img src="{% static '/img/icons/user_icon.png' %}"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <hr class="dividing-hr-header">
-                <div class="mega-menu-default mega-menu d-lg-block d-none">
-                    <div class="container position-relative">
-                        <div class="row">
-                            <nav>
-                                <ul class="page-dropdown-menu d-flex align-items-center justify-content-center">
-                                    <div class="middle"><a class="logo" href="#"><img src="{% static '/img/logos/vortex_logo.png' %}" alt=""></a></div>
-                                    <li class="dropdown-list"><a href="#"><span>ВИДЕОКАРТЫ</span></a></li>
-                                    <li class="dropdown-list"><a href="#">ПРОЦЕССОРЫ</a></li>
-                                    <li class="dropdown-list"><a href="#"><span>ОПЕРАТИВНАЯ ПАМЯТЬ</span></a></li>
-                                    <li class="dropdown-list"><a href="#"><span>КОРПУСА</span></a></li>
-                                    <li class="dropdown-list"><a href="#">ГОТОВЫЕ СБОРКИ</a></li>
-                                    <li class="dropdown-list"><a href="#"><span>ДРУГОЕ</span></a></li>
-                                    <li class="dropdown-list"><a href="#"><span>НОВОСТИ</span></a></li>
-                                    <li class="dropdown-list"><a href="#" class="number cart-icon"><img src="{% static '/img/icons/cart_icon.png' %}"><span class="total"></span></a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <div class="main-content">
-            <div>
-                <main class="overflow-hidden">
-                    <section class="breadcrumb-area" style="background-image: url('{% static '/img/main/main_banner.png' %}');">
-                    </section>
-                    <hr class="dividing-hr">
-                    <section class="about">
-                        <div class="container">
-                            <div>
-                                <div class="about__content text-center pb-3 pt-3">
-                                    <div class="title wow fadeInUp animated">
-                                        <h2>Только оригинальная продукция</h2>
-                                    </div>
-                                    <div class="text wow fadeInUp animated">
-                                        <p>У нас вы найдете только оригинальную продукцию высочайшего качества. Мы гордимся тем, что
-                                            предлагаем только оригинальные товары от известных брендов, чтобы обеспечить нашим
-                                            клиентам надежность и удовлетворение от покупки. Приобретая у нас продукцию, вы можете
-                                            быть уверены в её подлинности и безопасности. Покупайте у нас, выбирая только
-                                            оригинальные товары!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="mission">
-                        <div class="shape1"><img src="{% static '/img/main/spot_1.png' %}" alt="" /></div>
-                        <div class="shape2"><img src="{% static '/img/main/spot_2.png' %}" alt="" /></div>
-                        <hr class="dividing-hr">
-                        <div class="auto-container container mission__background pb-5 pt-5">
-                            <div class="container">
-                                <div class="row mt--30 align-items-center justify-content-center">
-                                    <div class="col-lg-6 col-md-10 mt-30">
-                                        <div class="mission__content text-lg-start text-center">
-                                            <h2 class=" wow fadeInUp animated">Наша задача</h2>
-                                            <p class=" wow fadeInUp animated">Мы желаем предоставить клиентам широкий выбор
-                                                качественных компьютерных комплектующих по доступным ценам. Мы стремимся помочь
-                                                нашим клиентам создать мощные и надежные компьютеры для любых целей - будь то игры,
-                                                работа, учеба или творчество. Наша команда профессионалов всегда готова помочь с
-                                                выбором товара, дать консультацию и поддержку на всех этапах покупки. Мы ценим
-                                                доверие клиентов и гарантируем качество наших услуг.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 mt-30">
-                                        <div class="mission__thumb wow fadeInRight animated pb-0"> <img
-                                                src="{% static '/img/main/mission-img.png' %}" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <hr class="dividing-hr">
-                    <section class="team pt-5 pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-xl-6 col-lg-9">
-                                    <div class="section-head text-center wow fadeInUp animated">
-                                        <h2 class="title">Наша команда</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row justify-content-center">
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-10 wow fadeInUp animated">
-                                    <div class="team__single mt-30 ">
-                                        <div class="team__single-img"> <img src="{% static '/img/main/worker_2.png' %}" alt="" />
-                                            <div class="overlay-text">
-                                                <ul>
-                                                    <li>
-                                                        <h6><a href="#" target="_blank">Телеграм</a> </h6>
-                                                    </li>
-                                                    <li>
-                                                        <h6><a href="#" target="_blank">ВКонтакте</a> </h6>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="team-content text-center">
-                                            <h2><a href="#0">Кирилл Дорогов</a> <span>CEO</span> </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-10 wow fadeInUp animated">
-                                    <div class="team__single mt-30 ">
-                                        <div class="team__single-img"> <img src="{% static '/img/main/worker_1.png' %}" alt="" />
-                                            <div class="overlay-text">
-                                                <ul>
-                                                    <li>
-                                                        <h6><a href="#" target="_blank">Телеграм</a> </h6>
-                                                    </li>
-                                                    <li>
-                                                        <h6><a href="#" target="_blank">ВКонтакте</a> </h6>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="team-content text-center">
-                                            <h2><a href="#0">Денис Зиновкин</a> <span>Основатель</span> </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-10 wow fadeInUp animated">
-                                    <div class="team__single mt-30 ">
-                                        <div class="team__single-img"> <img src="{% static '/img/main/worker_3.png' %}" alt="" />
-                                            <div class="overlay-text">
-                                                <ul>
-                                                    <li>
-                                                        <h6><a href="#" target="_blank">Телеграм</a> </h6>
-                                                    </li>
-                                                    <li>
-                                                        <h6><a href="#" target="_blank">ВКонтакте</a> </h6>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="team-content text-center">
-                                            <h2><a href="#0">Илья Мешканцов</a> <span>Топ-менеджер</span></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <hr class="dividing-hr">
-                    <section class="testimonial-two pt-5 pb-5">
-                        <div class="container">
-                            <div class="section-header text-center wow fadeInUp animated">
-                                <h2>Счастливые клиенты</h2>
-                            </div>
-                            <div class="row justify-content-center">
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-10 wow fadeInUp animated">
-                                    <div class="testimonial-two__single mt-30" style="background-image: url('{% static '/img/main/testimonial-v1-1.png' %}');">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__single-content text-center">
-                                                <div class="client-info">
-                                                    <h6>Илья Яцкевич</h6>
-                                                </div>
-                                                <div class="text">
-                                                    <p>- Когда меня спросили, какая лучшая компания по комплектующим, я без раздумий ответил “Vortex”. Я лично покупал у них свой компьютер.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-10 wow fadeInUp animated">
-                                    <div class="testimonial-two__single mt-30" style="background-image: url('{% static '/img/main/testimonial-v1-2.png' %}');">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__single-content text-center">
-                                                <div class="client-info">
-                                                    <h6>Александр Парадеев</h6>
-                                                </div>
-                                                <div class="text">
-                                                    <p>- Увидев компанию “Vortex”, я был потрясен, настолько отзывчивых сотрудников я еще не встречал. Я доволен покупкой и обязательно вернусь еще.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-10 wow fadeInUp animated">
-                                    <div class="testimonial-two__single mt-30" style="background-image: url('{% static '/img/main/testimonial-v1-3.png' %}');">
-                                        <div class="testimonial-two__single-inner">
-                                            <div class="testimonial-two__single-content text-center">
-                                                <div class="client-info">
-                                                    <h6>Александр Ермолаев</h6>
-                                                </div>
-                                                <div class="text">
-                                                    <p>- Увидев, как моргенштерн покупает компьютер, я решил поинтересоваться, где же он его взял? Он посоветовал компанию “Vortex”. Я понял, что буду покупать именно у них.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <hr class="dividing-hr">
-                    <div class="row justify-content-center mb-4">
-                        <div class="col-12 wow fadeInUp animated">
-                            <h3 class="text-center">Наши партнёры</h3>
-                            <div class="partnerslider d-flex justify-content-center mt-3">
-                                <div class="partner-one__brand">
-                                    <a href="#0" class="d-flex justify-content-center align-items-center">
-                                        <img src="{% static '/img/logos/sber_logo.png' %}" alt="Partner 1">
-                                    </a>
-                                </div>
-                                <div class="partner-one__brand">
-                                    <a href="#0" class="d-flex justify-content-center align-items-center">
-                                        <img src="{% static '/img/logos/amd_logo.png' %}" alt="Partner 2">
-                                    </a>
-                                </div>
-                                <div class="partner-one__brand">
-                                    <a href="#0" class="d-flex justify-content-center align-items-center">
-                                        <img src="{% static '/img/logos/gigabyte_logo.png' %}" alt="Partner 3">
-                                    </a>
-                                </div>
-                                <div class="partner-one__brand">
-                                    <a href="#0" class="d-flex justify-content-center align-items-center">
-                                        <img src="{% static '/img/logos/nvidia_logo.png' %}" alt="Partner 4">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </div>
-        </div>
+                            <form class="common-form" method="POST">
 
-        <footer class="overflow-hidden footer-default footer-style-1">
-            <div class="footer-default__main-footer position-relative pb-5 pt-0">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
-                            <div class="footer-default__single-box">
-                                <div class="company-info">
-                                    <div class="footer-logo"><a href="login.html"><img src="{% static '/img/logos/vortex-footer_logo.png' %}" alt=""></a></div>
-                                    <div class="text1">
-                                        <p>© 2024 vortex. Все права защищены</p>
-                                    </div>
+                                <div class="form-group">
+                                    <input id="name" name="name" type="text" class="form-control {% if form.name.errors %}is-invalid{% endif %}"
+                                           placeholder="Ваше имя" />
+                                    {% for error in form.name.errors %}
+                                        <div class="invalid-feedback">{{ error }}</div>
+                                    {% endfor %}
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
-                            <div class="footer-default__single-box">
-                                <ul class="footer-address-box">
-                                    <h4>8 (800) 555 35 35</h4>
-                                    <h4 style="color: #EB4242;">vortex@mail.ru</h4>
-                                    <h4>Калуга, Грабцевское шоссе 128</h4>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
-                            <div class="footer-default__single-box">
-                                <div class="footer-links">
-                                    <div class="text1 pt-3">
-                                        <a href="#">
-                                            <h4>Каталог</h4>
-                                        </a>
-                                    </div>
-                                    <div class="text2">
-                                        <a href="#">
-                                            <h4>О нас</h4>
-                                        </a>
-                                    </div>
-                                    <div class="text3">
-                                        <a href="#">
-                                            <h4>Поддержка</h4>
-                                        </a>
+                                <div class="form-group">
+                                    <input id="surname" name="surname" type="text" class="form-control {% if form.surname.errors %}is-invalid{% endif %}"
+                                           placeholder="Ваша Фамилия" />
+                                    {% for error in form.surname.errors %}
+                                        <div class="invalid-feedback">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="form-group">
+                                    <input id="login" name="login" type="text" class="form-control {% if form.login.errors %}is-invalid{% endif %}"
+                                           placeholder="Логин" />
+                                    {% for error in form.login.errors %}
+                                        <div class="invalid-feedback">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="form-group">
+                                    <input id="email" name="email" type="email" class="form-control {% if form.email.errors %}is-invalid{% endif %}"
+                                           placeholder="Email" />
+                                    {% for error in form.email.errors %}
+                                        <div class="invalid-feedback">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="form-group eye">
+                                    <input id="password" name="password" type="password" class="form-control {% if form.password.errors %}is-invalid{% endif %}"
+                                           placeholder="Пароль" />
+                                    {% for error in form.password.errors %}
+                                        <div class="invalid-feedback">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="form-group eye">
+                                    <input id="confirm_password" name="confirm_password" type="password"
+                                           class="form-control {% if form.confirm_password.errors %}is-invalid{% endif %}"
+                                           placeholder="Подтверждение пароля" />
+                                    {% for error in form.confirm_password.errors %}
+                                        <div class="invalid-feedback">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="checkk">
+                                    <div class="form-check p-0 m-0">
+                                        <input type="checkbox" id="accept_terms" name="accept_terms"
+                                               class="{% if form.accept_terms.errors %}is-invalid{% endif %}"
+                                               {% if form.accept_terms.value %}checked{% endif %} />
+                                        <label class="p-0" for="accept_terms">
+                                            Принимаю Условия и Политику конфиденциальности
+                                        </label>
+                                        {% for error in form.accept_terms.errors %}
+                                            <div class="invalid-feedback d-block">{{ error }}</div>
+                                        {% endfor %}
                                     </div>
                                 </div>
-                            </div>
+
+                                <button type="submit" class="btn--primary style2">Регистрация</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
-</body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</html>
+        </section>
+    </main>
+</div>
+{% endblock %}
