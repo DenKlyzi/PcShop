@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static '/css/bootstrap.5.1.1.min.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <title>{{ title }}</title>
 </head>
 <body>
     <header class="header-default">
@@ -39,7 +40,11 @@
                             <li class="d-lg-block d-none"><a href="#">О нас</a></li>
                             <li class="d-lg-block d-none"><a href="#">Контакты</a></li>
                             <li class="d-lg-block d-none">
+                                {% if user.is_anonymous %}
                                 <a href="{% url 'login' %}"><img src="{% static '/img/icons/user_icon.png' %}" alt="Личный кабинет"></a>
+                                {% else %}
+                                <a href="{% url 'profile' %}"><img src="{% static '/img/icons/user_icon.png' %}" alt="Личный кабинет"></a>
+                                {% endif %}
                             </li>
                         </ul>
                     </div>
