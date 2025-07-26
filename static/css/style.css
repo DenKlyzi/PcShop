@@ -12900,3 +12900,7 @@ img.rounded-circle {
     color: #cfcfcf;
     text-align: justify;
 }
+
+.id_username {
+    background-color: black;
+}

@@ -9,7 +9,7 @@
                     <div class="card text-center py-4">
                         <div class="d-flex flex-column align-items-center">
                             <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle mb-3" width="180" height="180">
-                            <h4 class="mb-2">{{ page_user }}</h4>
+                            <h4 class="mb-2">{{ page_user.username }}</h4>
                             <p class="text-secondary">{{ user.first_name }} {{ user.last_name }}</p>
                             <div class="text-center mt-3">
                                 <button class="btn btn-danger btn-sm w-50 mt-3"><a href="{% url 'logout' %}" style="color: white;">Выйти</a></button>

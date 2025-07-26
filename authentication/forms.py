@@ -1,14 +1,17 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django import forms
+from django.forms import PasswordInput
 
 from authentication.models import User
 
 
 class UserRegistrationForm(UserCreationForm):
     password1 = forms.CharField(
+        label='Пароль',
         widget=forms.PasswordInput(attrs={'placeholder': 'Введите пароль'}),
     )
     password2 = forms.CharField(
+        label='Повтор пароля',
         widget=forms.PasswordInput(attrs={'placeholder': 'Повторите пароль'}),
     )
 
@@ -22,20 +25,17 @@ class UserRegistrationForm(UserCreationForm):
             'email': forms.TextInput(attrs={'placeholder': 'Введите email'}),
         }
 
-    def clean(self):
-        cleaned_data = super().clean()
-        password1 = cleaned_data.get("password1")
-        password2 = cleaned_data.get("password2")
-        if password1 and password2 and password1 != password2:
-            raise forms.ValidationError("Пароли не совпадают")
-        return cleaned_data
-
 
 class UserLoginForm(AuthenticationForm):
+    username = forms.CharField(
+        label='Логин',
+        widget=forms.TextInput(attrs={'placeholder': 'Введите логин...'}),
+    )
+    password = forms.CharField(
+        label='Пароль',
+        widget=forms.PasswordInput(attrs={'placeholder': 'Введите пароль...'}),
+    )
+
     class Meta:
         model = User
         fields = ('username', 'password')
-        widgets = {
-            'username': forms.TextInput(attrs={'placeholder': 'Введите логин'}),
-            'password': forms.TextInput(attrs={'placeholder': 'Введите пароль'}),
-        }
